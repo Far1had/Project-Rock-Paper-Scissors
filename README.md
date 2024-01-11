@@ -43,6 +43,12 @@
 
 Das Design im Anhang ist nur ein Vorschlag. Du kannst gerne das Aussehen und die Benutzeroberfläche nach deinen Vorstellungen anpassen.
 
+
+Project-Rock-Paper-Scissors by Nancy & Farhad
+
+repo ===  https://github.com/Far1had/Project-Rock-Paper-Scissors
+web === https://far1had.github.io/Project-Rock-Paper-Scissors/
+
 Viel Erfolg bei der Umsetzung!
 
 **Design 2024 - Nancy Kopp & Farhad Amini**
