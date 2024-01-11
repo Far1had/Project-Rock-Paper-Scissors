@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-   <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project-Rock-Paper-Scissors</title>
 </head>
+
 <body>
     <header>
-            <h1>Project-Rock-Paper-Scissors</h1>
+        <h1>Project-Rock-Paper-Scissors</h1>
     </header>
     <main>
+        <div class="container">
+            <div class="rounds-box">
+                <h3>How many rounds?</h3>
+                <input type="radio" name="rounds" value="5" id="rounds5" checked>
+                <label for="rounds5">5</label>
+                <input type="radio" name="rounds" value="10" id="rounds10">
+                <label for="rounds10">10</label>
+                <input type="radio" name="rounds" value="15" id="rounds15">
+                <label for="rounds15">15</label>
+                <input type="radio" name="rounds" value="20" id="rounds20">
+                <label for="rounds20">20</label>
+            </div>
+
+            <div class="score-box">
+                <div class="score-box-div">
+                    <div class="player-box">
+                    <h4>You</h4>
+                    <p id="userScore">0</p>
+                </div>
+               
+                <div class="player-box">
+                    <h4>Comp</h4>
+                    <p id="computerScore">0</p>
+                </div>
+                </div>
+                <h1 id="result">Let's Play</h1>
+                 
+            </div>
+
+            <div class="output-box">
+                <h4>Make Your Move</h4>
+                <div class="symbols">
+                    <div class="symbol" id="rock">🗿</div>
+                    <div class="symbol" id="paper">🧻</div>
+                    <div class="symbol" id="scissors">✂️</div>
+                </div>
+            </div>
+
+            <button id="restartBtn" style="display: none;">Restart</button>
+        </div>
 
     </main>
     <footer>
@@ -19,4 +61,5 @@
     </footer>
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
