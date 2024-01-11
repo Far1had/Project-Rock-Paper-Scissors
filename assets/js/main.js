@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let userScore = 0;
     let computerScore = 0;
-    let roundsToPlay = 5;
-    let userRoundScore = 0;
-    let computerRoundScore = 0;
+    const roundsToPlay = 5;  // Du kannst die Anzahl der Runden hier ändern
 
     const userScoreElement = document.getElementById("userScore");
     const computerScoreElement = document.getElementById("computerScore");
@@ -25,13 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (result.includes("Win")) {
             userScore++;
-            userRoundScore++;
         } else if (result.includes("Lose")) {
             computerScore++;
-            computerRoundScore++;
         }
 
         updateScores();
+
+        if (userScore === 3 || computerScore === 3) {
+            endGame();
+        }
     }
 
     function getComputerChoice() {
@@ -54,15 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function updateScores() {
-        userScoreElement.textContent = userScore;
-        computerScoreElement.textContent = computerScore;
-
-        if (userRoundScore + computerRoundScore === roundsToPlay) {
-            endGame();
-        }
-    }
-
     function endGame() {
         let winner;
 
@@ -75,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         resultElement.textContent = `Game Over! ${winner} is the Winner!`;
+
         restartBtn.style.display = "block";
         disableSymbols();
     }
@@ -82,13 +74,20 @@ document.addEventListener("DOMContentLoaded", function () {
     function resetGame() {
         userScore = 0;
         computerScore = 0;
-        userRoundScore = 0;
-        computerRoundScore = 0;
-
+    
+        // Vollständige Seite neu laden
+        location.reload();
+    
+        // Der folgende Code wird nach der Aktualisierung nicht ausgeführt
         restartBtn.style.display = "none";
         enableSymbols();
         updateScores();
         resultElement.textContent = "Let's Play";
+    }
+
+    function updateScores() {
+        userScoreElement.textContent = userScore;
+        computerScoreElement.textContent = computerScore;
     }
 
     function disableSymbols() {
