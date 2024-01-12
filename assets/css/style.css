@@ -55,8 +55,8 @@ main {
     background-size: calc(70%);
     background-position: center;
     background-attachment: scroll;
+    
 }
-
 
 .container {
     display: flex;
@@ -68,8 +68,8 @@ main {
     font-size: 1.5rem;
     font-weight: bolder;
     color:rgba(41,180,229,1);
-    text-shadow: deeppink;
-
+    text-shadow: 3px 3px 3px rgba(3, 15, 139, 0.9);
+    filter: contrast(3);
 }
 
 .rounds-box {
@@ -107,6 +107,12 @@ main {
     flex: 1;
 }
 
+h4 {
+    text-align: center;
+    background-color: rgba(41,180,229,0.3);
+
+}
+
 .player-box h4 {
     margin-bottom: 5px;
 }
@@ -124,6 +130,7 @@ main {
 .symbol {
     width: 70px;
     height: 70px;
+    border-radius: 0.7rem;
     background-color: rgba(41,180,229,1);
     border: 0.5rem solid #333;
     margin: 0 10px;
@@ -162,6 +169,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: rgba(41,180,229,1);
 }
 
 footer {
