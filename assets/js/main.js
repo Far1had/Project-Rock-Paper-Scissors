@@ -1,13 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
     let userScore = 0;
     let computerScore = 0;
-    const roundsToPlay = 5;  // Du kannst die Anzahl der Runden hier ändern
+    let roundsToPlay = 5;  // Standardmäßig auf 5 Runden eingestellt
 
     const userScoreElement = document.getElementById("userScore");
     const computerScoreElement = document.getElementById("computerScore");
     const resultElement = document.getElementById("result");
     const symbols = document.querySelectorAll(".symbol");
     const restartBtn = document.getElementById("restartBtn");
+
+    // Radioauswahl für die Anzahl der Runden
+    const roundsRadioButtons = document.querySelectorAll('input[name="rounds"]');
+    roundsRadioButtons.forEach(radioButton => {
+        radioButton.addEventListener("change", function () {
+            roundsToPlay = parseInt(this.value);
+        });
+    });
 
     symbols.forEach(symbol => {
         symbol.addEventListener("click", () => playRound(symbol.id));
@@ -29,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         updateScores();
 
-        if (userScore === 3 || computerScore === 3) {
+        if (isGameOver()) {
             endGame();
         }
     }
@@ -54,6 +62,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function isGameOver() {
+        if (userScore === Math.ceil(roundsToPlay / 2) || computerScore === Math.ceil(roundsToPlay / 2)) {
+            return true;
+        }
+
+        return false;
+    }
+
     function endGame() {
         let winner;
 
@@ -74,11 +90,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function resetGame() {
         userScore = 0;
         computerScore = 0;
-    
-        // Vollständige Seite neu laden
-        location.reload();
-    
-        // Der folgende Code wird nach der Aktualisierung nicht ausgeführt
         restartBtn.style.display = "none";
         enableSymbols();
         updateScores();
