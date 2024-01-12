@@ -49,7 +49,7 @@ header {
 main {
     width: 100%;
     height: 70vh;
-    background-image: url(../img/schere-stein-papier-tinte-schwarz-weiss-zeichnung_725369-1362.jpg);
+    background-image: url(../img/schere-stein-papier-50.jpg);
     background-repeat: no-repeat;
     background-size: calc(70%);
     background-position: center;
@@ -73,7 +73,7 @@ main {
 }
 
 .rounds-box {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .rounds-box h3 {
@@ -85,9 +85,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 2.5em;
-    width: 30;
     font-family: "Pacifico";
 }
 
@@ -105,14 +104,19 @@ main {
 #result {
     font-size: 0.6em;
     color: rgba(41,180,229,0.3);
+    color: #333;
+
 }
+
+
 .player-box {
     flex: 1;
+    
 }
 
 h4 {
     text-align: center;
-    background-color: rgba(41,180,229,0.3);
+    /* background-color: rgba(41,180,229,0.3); */
 }
 
 .player-box h4 {
@@ -120,7 +124,7 @@ h4 {
 }
 
 .output-box {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .symbols {
@@ -162,10 +166,6 @@ h4 {
     background-size: calc(70%);
     background-position: center;
     background-attachment: scroll;
-}
-
-#result {
-    color: #333;
 }
 
 button {
