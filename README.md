@@ -15,26 +15,6 @@
 5. Die Gewinner:in jeder Runde wird basierend auf den bekannten Regeln ermittelt.
 6. Am Ende der festgelegten Runden wird der Gesamtsieger bekannt gegeben.
 
-## Installation
-
-1. Klone das Repository auf deinem lokalen Rechner:
-
-    ```bash
-    git clone https://github.com/DeinBenutzername/RockPaperScissors.git
-    ```
-
-2. Navigiere in das Projektverzeichnis:
-
-    ```bash
-    cd RockPaperScissors
-    ```
-
-3. Starte das Spiel:
-
-    ```bash
-    python main.py
-    ```
-
 ## Vorschau (optional)
 
 ![Spielvorschau](screenshot.png)

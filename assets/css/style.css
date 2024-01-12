@@ -46,17 +46,28 @@ header {
     font-size: 0.9rem;
 }
 
-
 main {
     width: 100%;
     height: 70vh;
+    opacity: 0.6;
     background-image: url(../img/schere-stein-papier-tinte-schwarz-weiss-zeichnung_725369-1362.jpg);
     background-repeat: no-repeat;
     background-size: calc(70%);
     background-position: center;
-    background-attachment: scroll;
-    
+    background-attachment: scroll;   
+
 }
+
+main:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+  }
 
 .container {
     display: flex;
