@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function isGameOver() {
-        if (userScore === Math.ceil(roundsToPlay / 2) || computerScore === Math.ceil(roundsToPlay / 2)) {
+        if (userScore === Math.ceil(roundsToPlay / 2 ) || computerScore === Math.ceil(roundsToPlay / 2 )) {
             return true;
         }
 
@@ -94,7 +94,10 @@ document.addEventListener("DOMContentLoaded", function () {
         enableSymbols();
         updateScores();
         resultElement.textContent = "Let's Play";
+    
+        location.reload();
     }
+    
 
     function updateScores() {
         userScoreElement.textContent = userScore;
