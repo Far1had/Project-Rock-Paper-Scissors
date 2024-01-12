@@ -58,9 +58,6 @@ main {
     /* opacity: 0.6; */
 }
 
-
-
-
 .container {
     display: flex;
     flex-direction: column;
@@ -91,9 +88,10 @@ main {
     margin-bottom: 20px;
     font-size: 2.5em;
     width: 30;
-    
+    font-family: "Pacifico";
 }
-.score-box-div{
+
+.score-box-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -103,8 +101,10 @@ main {
     font-family: "Pacifico";
     font-size: 3rem;
 }
+
 #result {
     font-size: 0.6em;
+    color: rgba(41,180,229,0.3);
 }
 .player-box {
     flex: 1;
@@ -113,7 +113,6 @@ main {
 h4 {
     text-align: center;
     background-color: rgba(41,180,229,0.3);
-
 }
 
 .player-box h4 {
