@@ -68,8 +68,8 @@ main {
     font-size: 1.5rem;
     font-weight: bolder;
     color:rgba(41,180,229,1);
-    text-shadow: 3px 3px 3px rgba(3, 15, 139, 0.9);
-    filter: contrast(3);
+    text-shadow: 1.5px 1.5px 1.5px rgba(3, 15, 139, 0.9);
+    filter: saturate(3);
 }
 
 .rounds-box {
@@ -91,7 +91,11 @@ main {
     justify-content: center;
     align-items: center;
     gap: 10%;
-    font-size: 3rem;
+    /* font-size: 3rem; */
+}
+
+#computerScore p {
+    margin: -3px;
 }
 
 #result {
@@ -101,7 +105,7 @@ main {
 
 
 .player-box {
-    flex: 1;
+    /* flex: 1; */
 }
 
 h4 {
@@ -114,7 +118,7 @@ h4 {
 }
 
 .player-box p {
-
+    text-align: center;
 }
 
 .output-box {
@@ -137,13 +141,18 @@ h4 {
     cursor: pointer;
 }
 
+.symbol:hover {
+    transform: scale(1.25);
+    transition: .2s ease-in-out 0s;
+    box-shadow: 3px 3px 3px rgba(3, 15, 139, 0.9);;
+}
+
 #rock {
     background-image: url(../img/rock-up.png);
     background-repeat: no-repeat;
     background-size: calc(70%);
     background-position: center;
     background-attachment: scroll;
-
 }
 
 #paper {
@@ -172,6 +181,11 @@ button {
     margin: 0 10px;
     cursor: pointer;
     border-radius: 0.3rem;
+    transition: .2s ease-in-out 0s;
+}
+
+button:hover {
+    transform: scale(1.25);
 }
 
 footer {
